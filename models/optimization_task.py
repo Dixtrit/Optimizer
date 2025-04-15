@@ -2,13 +2,13 @@
 from models.optimization_config import OptimizationConfig
 from models.objective import Objective
 from models.constraint import Constraint
-from models.design_variable import DesignVariable
+from models.design_variables import DesignVariables
 from typing import List
 
 
 class OptimizationTask:
     def __init__(self, config: OptimizationConfig = None, cae_model=None, objective: Objective = None,
-                 constraints: List[Constraint] = [], design_variables: List[DesignVariable] = [], solver_path=None,
+                 constraints: List[Constraint] = [], design_variables: List[DesignVariables] = [], solver_path=None,
                  solver_script=None):
         self.config = config
         self.cae_models = cae_model
