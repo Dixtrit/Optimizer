@@ -1,16 +1,16 @@
 import numpy as np
 
-from constraint import Constraint
-from optimization_config import OptimizationConfig
-from design_variables import DesignVariables
-from objective import Objective
+from models.constraint import Constraint
+from models.optimization_config import OptimizationConfig
+from models.design_variables import DesignVariables
+from models.objective import Objective
 from typing import List
 
 
 class OptimizationTask:
     def __init__(self, config: OptimizationConfig = None,
-                 cae_model = None, ojective: Objective = None, constraint: List[Constraint] = None,
-                 design_variables: DesignVariables = None,
+                 cae_model = None, ojective: Objective = None, constraint: List[Constraint] = [],
+                 design_variables: List[DesignVariables] = [],
                  solver_path = None, solver_script = None):
         self.config = config
         self.cae_model = cae_model

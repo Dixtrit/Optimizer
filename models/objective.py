@@ -1,8 +1,8 @@
-from objective_type import Objective_type
+from models.objective_type import ObjectiveType
 
 
 class Objective:
-    def __init__(self, name, type: Objective_type, vallues):
+    def __init__(self, name, type: ObjectiveType, vallues):
         self.name = name
         self.type = type
         self.vallues = vallues
